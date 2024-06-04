@@ -15,11 +15,11 @@
             Caries Detection
         </div>
         <div class="flex items-center grow gap-4">
-            <a class="text-white text-[18px]">Model</a>
             <a class="text-white text-[18px]">About</a>
+            <a class="text-white text-[18px]">Model</a>
         </div>
         <div>
-            <button class="text-white border rounded-full p-2">Detect</button>
+            <button class="text-white border rounded-[24px] p-2">Detect</button>
         </div>
     </nav>
   </section>
@@ -29,7 +29,7 @@
     <div>
         <h1 class="text-white text-[32px]">Welcome 
             to Caries Detection</h1>
-        <p class="text-white text-[18px]">by using Deep Learning, dental caries  can be identified the type of caries you have</p>
+        <p class="text-white text-[18px]">by using Deep Learning, dental caries can be identified the type of caries you have</p>
         <button class="text-white text-[14px] border rounded-full p-2">Get Started</button>
     </div>
     <div>
@@ -39,8 +39,9 @@
   </section>
   <section class="w-full flex justify-center">
     <div class="w-11/12">
-        <h2>About</h2>
-        <p>Dental Caries. tooth decay, also known as dental caries, is a dental and oral health condition that can allect anyone. The symptoms include increased tooth sensiticity and pain when consuming sweat, cold, or hot foods </p>
+        <h2 class="text-black text-[30px] flex justify-center items-center relative h-full max-h-80">About</h2>
+        <p class="text-sky-400 text-[20px]">Dental Caries. tooth decay, also known as dental caries, is a dental and oral health condition that can allect anyone. 
+            The symptoms include increased tooth sensiticity and pain when consuming sweat, cold, or hot foods </p>
         <div class="flex gap-8">
             <div class="flex justify-between items-center">
                 <img src="{{ asset('images/media/Enamel.svg') }}" alt="Enamel">
