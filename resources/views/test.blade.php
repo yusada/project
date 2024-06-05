@@ -7,6 +7,11 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>TEST PAGE</title>
     @vite(['resources/css/app.css', 'resources/js/app.js'])
+    <style>
+        html {
+            scroll-behavior: smooth
+        }
+    </style>
 </head>
 
 <body>
@@ -40,7 +45,7 @@
                                 class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Model</a>
                         </li>
                         <li>
-                            <a href="#"
+                            <a href="#detection"
                                 class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Detection</a>
                         </li>
                         <li>
@@ -67,6 +72,7 @@
             <img src="{{ asset('images/media/dentist2.svg') }}" class="shadow-sm" alt="Dentist">
         </div>
     </section>
+
     {{-- Wave Code --}}
     <svg id="wave" style="transform:rotate(180deg); transition: 0.3s" viewBox="0 0 1440 420" version="1.1"
         xmlns="http://www.w3.org/2000/svg">
@@ -90,36 +96,120 @@
         </path>
     </svg>
     {{-- End Wave Code --}}
-    <section>
+
+    <section class="mb-6">
+        <div class="w-5/6 mx-auto">
+            <div class="text-gray-900 text-2xl font-semibold text-center mb-4" id="model">Model</div>
+            <p class="text-blue-700 text-center mb-8">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur
+                veniam dolorem minus. Non totam, veritatis excepturi quos earum aut minima, error soluta veniam
+                perspiciatis enim! Dolor culpa molestias ex atque?
+            </p>
+            <div class="text-center p-4 outline outline-black">
+                Model here..
+            </div>
+        </div>
+    </section>
+
+    <section class="mb-6">
+        <div class="w-5/6 mx-auto">
+            <div class="text-gray-900 text-2xl font-semibold text-center mb-4" id="detection">Detection</div>
+            <p class="text-blue-700 text-center mb-8">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur
+                veniam dolorem minus. Non totam, veritatis excepturi quos earum aut minima, error soluta veniam
+                perspiciatis enim! Dolor culpa molestias ex atque?
+            </p>
+            <div class="flex flex-row justify-center items-start">
+                <div class="bg-blue-300 p-20 rounded-lg">
+                    Picture
+                </div>
+                <div class="ms-12">
+                    <div class="mb-2 text-lg font-bold tracking-tight text-gray-900 dark:text-white">
+                        Upload Image Here!
+                    </div>
+                    <form class="max-w-lg mx-auto">
+                        <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                            for="file_upload">Upload file</label>
+                        <input
+                            class="block w-full text-sm text-blue-900 border border-blue-300 rounded-lg cursor-pointer bg-blue-50 dark:text-blue-400 focus:outline-none dark:bg-blue-700 dark:border-blue-600 dark:placeholder-blue-400"
+                            aria-describedby="img_upload" id="file_upload" type="file">
+                        <div class="mt-1 text-sm text-gray-500 dark:text-gray-300" id="img_upload">
+                            Upload gambar
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="mb-6">
         <div class="w-5/6 mx-auto">
             <div class="text-gray-900 text-2xl font-semibold text-center mb-4" id="about">About</div>
-            <p class="text-blue-700 text-center"><span class="font-bold">Dental Caries</span>.
+            <p class="text-blue-700 text-center mb-8"><span class="font-bold">Dental Caries</span>.
                 tooth decay, also known as dental caries, is a dental and oral health condition that can allect
                 anyone. The symptoms include increased tooth sensiticity and pain when consuming sweat, cold, or hot
                 foods
             </p>
-            <div class="flex lg:flex-row flex-col lg:gap-8 gap-0 mt-10 justify-center">
-                <div class="flex justify-between items-center">
-                    <img src="{{ asset('images/media/Enamel.svg') }}" alt="Enamel">
-                </div>
-                <div class="flex justify-between items-center">
-                    <img src="{{ asset('images/media/Dentin.svg') }}" alt="Dentin">
-                </div>
-                <div class="flex justify-between items-center">
-                    <img src="{{ asset('images/media/Pulp.svg') }}" alt="Pulp">
-                </div>
-            </div>
-            <div class="flex flex-row justify-between">
-                <div class="bg-white flex flex-row items-center gap-4 p-4 rounded-lg shadow-lg">
+            <div class="flex flex-row justify-between p-6">
+                <div
+                    class="w-auto bg-white flex flex-row items-center gap-12 px-6 py-2.5 rounded-lg shadow-lg outline outline-slate-50">
                     <img class="w-14 h-14 rounded-full shadow-lg" src="{{ asset('images/media/sample.jpg') }}"
                         alt="">
-                    <div class="text-blue-700 text-xs font-semibold text-center">
+                    <div class="text-blue-700 text-sm font-semibold text-center me-14">
                         Enamel Decay
+                    </div>
+                </div>
+                <div
+                    class="w-auto bg-white flex flex-row items-center gap-12 px-6 py-2.5 rounded-lg shadow-lg outline outline-slate-50">
+                    <img class="w-14 h-14 rounded-full shadow-lg" src="{{ asset('images/media/sample.jpg') }}"
+                        alt="">
+                    <div class="text-blue-700 text-sm font-semibold text-center me-14">
+                        Dentin Decay
+                    </div>
+                </div>
+                <div
+                    class="w-auto bg-white flex flex-row items-center gap-12 px-6 py-2.5 rounded-lg shadow-lg outline outline-slate-50">
+                    <img class="w-14 h-14 rounded-full shadow-lg" src="{{ asset('images/media/sample.jpg') }}"
+                        alt="">
+                    <div class="text-blue-700 text-sm font-semibold text-center me-14">
+                        Pulp Decay
                     </div>
                 </div>
             </div>
         </div>
     </section>
+
+
+
+    <footer class="bg-blue-500 rounded-lg shadow dark:bg-gray-900 m-4">
+        <div class="w-full max-w-screen-xl mx-auto p-4 md:py-8">
+            <div class="sm:flex sm:items-center sm:justify-between">
+                <a href="#top" class="flex items-center mb-4 sm:mb-0 space-x-3 rtl:space-x-reverse">
+                    <img src="{{ asset('images/media/tooth.svg') }}" class="h-8" alt="Logo" />
+                    <span class="self-center text-2xl font-semibold whitespace-nowrap text-white">Caries
+                        Detection</span>
+                </a>
+                <ul
+                    class="flex flex-wrap items-center mb-6 text-sm font-medium text-gray-900 sm:mb-0 dark:text-gray-400">
+                    <li>
+                        <a href="#top" class="hover:underline me-4 md:me-6">Home</a>
+                    </li>
+                    <li>
+                        <a href="#model" class="hover:underline me-4 md:me-6">Model</a>
+                    </li>
+                    <li>
+                        <a href="#detection" class="hover:underline me-4 md:me-6">Detection</a>
+                    </li>
+                    <li>
+                        <a href="#about" class="hover:underline">About</a>
+                    </li>
+                </ul>
+            </div>
+            <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
+            <span class="block text-sm text-gray-900 sm:text-center dark:text-gray-400">© 2023 <a href="#top"
+                    class="hover:underline">Flowbite™</a>. All Rights Reserved.</span>
+        </div>
+    </footer>
 </body>
 
 </html>
