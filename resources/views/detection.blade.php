@@ -4,11 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://cdn.tailwindcss.com"></script>
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
+    {{-- <script src="https://cdn.tailwindcss.com"></script> --}}
 </head>
 
 <body>
-    <section class="w-full flex justify-center absolute w-full h-20 z-10 text-blue-500">
+    <section class="w-full flex justify-center absolute h-20 z-10 text-blue-500">
         <nav class="flex justify-center items-center w-11/12 gap-8 relative">
             <div class="absolute">
                 <img src="{{ asset('images/media/b-tooth.svg') }}" alt="tooth">
@@ -86,7 +87,8 @@
                     <div class="flex w-full gap-4">
                         <div class="w-full">
                             <label for="name">Name</label>
-                            <input type="text" id="name" name="name" class="w-full border rounded-full py-2 px-4 mt-2">
+                            <input type="text" id="name" name="name"
+                                class="w-full border rounded-full py-2 px-4 mt-2">
                         </div>
                         <div class="w-full">
                             <label for="email">Email</label>
@@ -101,8 +103,7 @@
                     </div>
                     <div class="mt-4">
                         <label for="message">Message</label>
-                        <textarea id="message" name="message"
-                            class="w-full border rounded-lg py-2 px-4 mt-2"></textarea>
+                        <textarea id="message" name="message" class="w-full border rounded-lg py-2 px-4 mt-2"></textarea>
                     </div>
                     <div class="mt-4 w-full flex justify-end">
                         <button class="text-white bg-slate-900 border rounded-full py-2 px-7">Send</button>
