@@ -120,8 +120,13 @@
                 perspiciatis enim! Dolor culpa molestias ex atque?
             </p>
             <div class="flex flex-row justify-center items-start">
-                <div class="bg-blue-300 p-20 rounded-lg">
-                    Picture
+                <div class="flex flex-col items-center">
+                    <div class="bg-blue-300 p-20 mb-2 rounded-lg">
+                        Picture
+                    </div>
+                    <div class="text-lg text-gray-900 font-semibold">
+                        Status
+                    </div>
                 </div>
                 <div class="ms-12">
                     <div class="mb-2 text-lg font-bold tracking-tight text-gray-900 dark:text-white">
