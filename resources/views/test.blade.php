@@ -57,8 +57,9 @@
             </div>
         </nav>
         <div class="w-5/6 flex justify-between items-center mx-auto">
-            <div>
-                <div class="text-white text-5xl font-bold mb-8">Welcome <br />to Caries Detection</div>
+            <div class="text-center md:text-left w-full">
+                <div class="text-white text-5xl font-bold mb-8">Welcome <br />to Caries
+                    Detection</div>
                 <p class="text-white text-xl mb-4">by using <span class="font-bold">Deep Learning</span>, dental
                     caries
                     <br />
@@ -69,7 +70,7 @@
                     Get Started
                 </button>
             </div>
-            <img src="{{ asset('images/media/dentist2.svg') }}" class="shadow-sm" alt="Dentist">
+            <img src="{{ asset('images/media/dentist2.svg') }}" class="shadow-sm hidden md:block" alt="Dentist">
         </div>
     </section>
 
@@ -155,7 +156,7 @@
                 anyone. The symptoms include increased tooth sensiticity and pain when consuming sweat, cold, or hot
                 foods
             </p>
-            <div class="flex flex-row justify-between p-6">
+            <div class="flex flex-col md:flex-row gap-4 md:gap-0 justify-between p-6">
                 <div
                     class="w-auto bg-white flex flex-row items-center gap-12 px-6 py-2.5 rounded-lg shadow-lg outline outline-slate-50">
                     <img class="w-14 h-14 rounded-full shadow-lg" src="{{ asset('images/media/sample.jpg') }}"
@@ -184,8 +185,6 @@
         </div>
     </section>
 
-
-
     <footer class="bg-blue-500 rounded-lg shadow dark:bg-gray-900 m-4">
         <div class="w-full max-w-screen-xl mx-auto p-4 md:py-8">
             <div class="sm:flex sm:items-center sm:justify-between">
@@ -194,8 +193,7 @@
                     <span class="self-center text-2xl font-semibold whitespace-nowrap text-white">Caries
                         Detection</span>
                 </a>
-                <ul
-                    class="flex flex-wrap items-center mb-6 text-sm font-medium text-gray-900 sm:mb-0 dark:text-gray-400">
+                <ul class="flex flex-wrap items-center mb-6 text-sm font-medium text-white sm:mb-0">
                     <li>
                         <a href="#top" class="hover:underline me-4 md:me-6">Home</a>
                     </li>
@@ -211,7 +209,7 @@
                 </ul>
             </div>
             <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
-            <span class="block text-sm text-gray-900 sm:text-center dark:text-gray-400">© 2023 <a href="#top"
+            <span class="block text-sm text-white sm:text-center">© 2023 <a href="#top"
                     class="hover:underline">Flowbite™</a>. All Rights Reserved.</span>
         </div>
     </footer>
